@@ -81,3 +81,15 @@ btn.addEventListener("click", onClick);
 // Indepartarea unui ascultator de evenimente
 // btn.removeEventListener("click", onClick);
  
+// local storage && session storage
+// stocarea de date in localStorage
+localStorage.setItem("importantData", "3 items in cart");
+
+const savedData = localStorage.getItem("importantData");
+console.log("savedData: ", savedData);
+
+// stocarea de date in sessionStorage
+sessionStorage.setItem("temporary", "Temporary data");
+
+const tempData = sessionStorage.getItem("temporary");
+console.log(tempData);
