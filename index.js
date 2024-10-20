@@ -63,3 +63,21 @@ subtitle.textContent = "This subtitle was added with JS";
 const toDelete = document.querySelector("#delete-me");
 toDelete.remove();
 
+// Adaugarea de ascultatori de evenimente (functii care se apeleaz cand apare un eveniment ex: click) pe elemente
+const btn = document.querySelector("#click-me-btn");
+
+let clickLimit = 3;
+let currentClickCount = 0;
+const onClick = () =>  {
+    alert("Button was clicked!");
+    currentClickCount++; 
+
+    if (currentClickCount === clickLimit) {
+        btn.removeEventListener("click", onClick);
+    }
+};
+btn.addEventListener("click", onClick);
+
+// Indepartarea unui ascultator de evenimente
+// btn.removeEventListener("click", onClick);
+ 
